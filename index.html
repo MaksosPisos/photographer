@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <a href="#">
+                        <picture>
+                            <source srcset="./img/header/header-logo_mobile.svg" media="(max-width: 1023px)">
+                            <source srcset="./img/header/header-logo_plan.svg" media="(max-width: 1439px)">
+                            <img src="./img/header/header-logo_main.svg" alt="Logo">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="header-menu">
+                    <a href="#portfolio" class="header-menu_portfolio">
+                        Портфолио
+                    </a>
+                    <a href="#" class="header-menu_typejob">
+                        Виды работ
+                    </a>
+                    <a href="#" class="header-menu_about">
+                        О фотостудии
+                    </a>
+                    <a href="#" class="header-menu_feedback">
+                        Отзывы
+                    </a>
+                    <a href="#" class="header-menu_price">
+                        Услуги и цены
+                    </a>
+                    <a href="#" class="header-menu_contacts">
+                        Контакты
+                    </a>
+                </div>
+                <div class="header-info">
+                    <button class="btn header-btn">
+                        обратный звонок
+                    </button>
+
+                    <div class="header-info_number">
+                        +7 (499) 344 60 91
+                    </div>
+                    <a href="#" class="header-call">
+                        <!-- <img src="./img/header/header-call.svg" alt="Call"> -->
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.6775 13.6617C17.345 13.6617 16.0558 13.445 14.8533 13.055C14.4742 12.925 14.0517 13.0225 13.7592 13.315L12.0583 15.4492C8.9925 13.9867 6.12167 11.2242 4.59417 8.05L6.70667 6.25167C6.99917 5.94833 7.08583 5.52583 6.96667 5.14667C6.56583 3.94417 6.36 2.655 6.36 1.3225C6.36 0.7375 5.8725 0.25 5.2875 0.25H1.53917C0.954167 0.25 0.25 0.51 0.25 1.3225C0.25 11.3867 8.62417 19.75 18.6775 19.75C19.4467 19.75 19.75 19.0675 19.75 18.4717V14.7342C19.75 14.1492 19.2625 13.6617 18.6775 13.6617Z" />
+                        </svg>
+                    </a>
+                    <button class="btn btn-burger">
+                        <img src="./img/header/header-burger.svg" alt="Burger">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="wrapper">
+            <div class="main-wrapper">
+                <h1 class="main-title">
+                    Профессиональная <br> фотосессия в студии
+                </h1>
+                <h4 class="main-subtitle">
+                    Наша фотостудия позволит <br> исполнить ваши мечты
+                </h4>
+                <p class="main-text">
+                    Фотографии стали неотъемлемой частью нашей жизни. <br> Это теперь не просто памятные снимки в
+                    альбомах,
+                    ныне фото становиться способом <br> понравиться окружающим, получить восхищение, заявить о себе
+                    всему
+                    миру. <br>
+                    Выбор правильной фотостудии занимает далеко не последнее место в получение <br> фотографий. И мы с
+                    точностью заявляем, что нашей фотостудией вы останетесь <br> довольны
+                    и еще не раз захотите возвращаться к нам.
+                </p>
+                <a href="./form.html" class="btn main-btn">
+                    получить консультацию
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="works" id="portfolio">
+        <div class="works-wrapper">
+            <h3>
+                Наши работы
+            </h3>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div>
+                            <picture>
+                                <source srcset="./img/works/works-pic-center_tel.jpg" media="(max-width: 1023px)">
+                                <source srcset="./img/works/works-pic-center_plan.jpg" media="(max-width: 1440px)">
+                                <img src="./img/works/works-pic-center_main.jpg" alt="Pic">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <picture>
+                                <source srcset="./img/works//works-pic-right_tel.jpg" media="(max-width: 1023px)">
+                                <source srcset="./img/works//works-pic-right_plan.jpg" media="(max-width: 1440px)">
+                                <img src="./img/works//works-pic-right_main.jpg" alt="Pic">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <picture>
+                                <source srcset="./img/works/works-pic-left_tel.jpg" media="(max-width: 1023px)">
+                                <source srcset="./img/works/works-pic-left_plan.jpg" media="(max-width: 1440px)">
+                                <img src="./img/works/works-pic-left_main.jpg" alt="Pic">
+                            </picture>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination works-pag"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="locations">
+        <div class="wrapper">
+            <div class="locations-wrapper">
+                <h3>Наши локации</h3>
+                <div class="locations-wrapper-btn">
+                    <div class="swiper-button-next-loc"></div>
+                    <div class="swiper-button-prev-loc"></div>
+                </div>
+                <div class="swiper-locations">
+                    <!-- Additional required wrapper -->
+                    <!-- <div class="swiper-button-prev-loc"></div> -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div>
+                                <picture>
+                                    <source srcset="./img/locations/locations-1_tel.jpg" media="(max-width: 1023px)">
+                                    <source srcset="./img/locations/locations-1_plan.jpg" media="(max-width: 1440px)">
+                                    <img src="./img/locations/locations-1.jpg" alt="Pic">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <picture>
+                                    <source srcset="./img/locations/locations-2_tel.jpg" media="(max-width: 1023px)">
+                                    <img src="./img/locations/locations-2.jpg" alt="Pic">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <picture>
+                                    <source srcset="./img/locations/locations-3_tel.jpg" media="(max-width: 1023px)">
+                                    <img src="./img/locations/locations-3.jpg" alt="Pic">
+                                </picture>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- <div class="swiper-button-next-loc"></div> -->
+                    <!-- If we need pagination -->
+
+
+                </div>
+
+                <a href="#" class="btn main-btn">
+                    выбрать локацию
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="photostudio">
+        <div class="photostudio-wrapper">
+            <h3>
+                Оформление <br> фотостудии
+            </h3>
+            <div class="photostudio-video">
+                <picture>
+                    <source srcset="./img/photostudio-play/photostudio-play_tel.svg" media="(max-width: 1023px)">
+                    <source srcset="./img/photostudio-play/photostudio-play_plan.svg" media="(max-width: 1439px)">
+                    <img src="./img/photostudio-play/photostudio-play.svg" alt="Play">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="wrapper">
+            <div class="services-wrapper">
+                <h3>
+                    Виды услуг
+                </h3>
+                <div class="services-container">
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br> Лав Стори
+                        </div>
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-1_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-1_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-1.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br> для парней
+                        </div>
+                    </div>
+                    <div class="services-container-item services-container-item_box-2">
+                        <picture>
+                            <source srcset="./img/services/serv-love-2_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-2_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-2.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br> для подростков
+                        </div>
+                    </div>
+                    <div class="services-container-item services-container-item_box-3">
+                        <picture>
+                            <source srcset="./img/services/serv-love-3_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-3_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-3.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Групповая <br> фотосессия
+                        </div>
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-4_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-4_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-4.jpg" alt="Pic">
+                        </picture>
+
+                        <div class="services-container-item-text">
+                            Фотосессия Лукбук
+                        </div>
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-5_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-5_plan.png" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-5.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br>с животными
+                        </div>
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-6_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-6_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-6.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Парная фотосессия
+                        </div>
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-7_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-7_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-7.jpg" alt="Pic">
+                        </picture>
+
+                        <div class="services-container-item-text">
+                            Фотосессия <br>для беременных
+                        </div>
+                    </div>
+                    <div class="services-container-item services-container-item_box-8">
+
+                        <picture>
+                            <source srcset="./img/services/serv-love-8_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-8_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-8.jpg" alt="Pic">
+                            <div class="services-container-item-text">
+                                Семейная <br> фотосессия ( дети 14+  )
+                            </div>
+                        </picture>
+
+                    </div>
+                    <div class="services-container-item">
+                        <picture>
+                            <source srcset="./img/services/serv-love-9_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-9_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-9.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br> «Деловой стиль»
+                        </div>
+                    </div>
+
+                    <div class="services-container-item services-container-item_box-10">
+                        <picture>
+                            <source srcset="./img/services/serv-love-10_tel.jpg" media="(max-width:1023px)">
+                            <source srcset="./img/services/serv-love-10_plan.jpg" media="(max-width:1439px)">
+                            <img src="./img/services/serv-love-10.jpg" alt="Pic">
+                        </picture>
+                        <div class="services-container-item-text">
+                            Фотосессия <br> для девушек
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
