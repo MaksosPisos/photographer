@@ -18,7 +18,7 @@ body {
     font-weight: 500;
     font-style: normal;
     line-height: 24px;
-    color: #fff;
+    color: var(--text-color-2);
 }
 body.open {
     overflow: hidden;
@@ -817,6 +817,7 @@ body.open {
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
+    color: #fff;
 }
  .services-container-item_box-2 {
     grid-column-start: 2;
@@ -866,4 +867,200 @@ body.open {
     .services-container-item-text br {
         display: none;
     }
+}
+
+@media screen and (min-width: 1440px) {
+    .services {
+        padding-bottom: 160px;
+    }
+    .services-wrapper h3 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .services-container {
+        gap: 2rem;
+        grid-template-rows: 335px;
+    }
+    .services-container-item-text {
+        font-weight: 600;
+        bottom: 1rem;
+        left: 2rem;
+    }
+}
+/* stages */
+
+.stages {
+    background-color: #fff;
+    margin-bottom: 80px;
+    background-image: url(./img/stages/stages-bg_tel.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.stages-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.stages-wrapper h3 {
+    padding-bottom: 40px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 34px;
+    text-align: center;
+    color: var(--text-color-1);
+}
+.stages-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+}
+.stages-step-item {
+    border: 2px solid #E97522;
+    width: 320px;
+    box-shadow: 0px 24px 38px rgba(220, 220, 220, 0.14), 0px 9px 46px rgba(216, 216, 216, 0.12), 0px 11px 15px rgba(221, 221, 221, 0.2);
+    border-radius: 12px;
+    background: #fff;
+    position: relative;
+}
+.stages-step-item h6 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    color: var(--text-color-1);
+    padding: 26px 0 12px;
+}
+.stages-step-item-text {
+    text-align: center;
+    padding: 0 36px 56px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.stages-step-item-number {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #F9F4EE;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -16px;
+    left: calc(50% - 25px);
+}
+.stages-step + .stages-step {
+    display: none;
+} 
+
+@media screen and (min-width: 1024px) {
+    .stages {
+        margin-bottom: 140px;
+        background-image: url(./img/stages/stages-bg_plan.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 170px;
+    }
+    .stages-wrapper h3 {
+        padding-bottom: 0;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .stages-step-item-number {
+        line-height: 37px;
+        left: -16px;
+    }
+    .stages-step-item h6 {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        padding-left: 40px;
+    }
+    .stages-step-item-text {
+        font-size: 16px;
+        line-height: 22px;
+        text-align: left;
+        padding: 0 40px 50px;
+    }
+    .stages-step-item {
+        width: 348px;
+        
+    }
+    .stages-step-item-first {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+    }
+    .stages-step-item-second {
+        position: absolute;
+        top: 136px;
+        right: 20px;
+    }
+    .stages-step-item-free {
+        position: absolute;
+        top: 404px;
+        right: 185px;
+    }
+    .stages-step-item-four {
+        position: absolute;
+        top: 678px;
+        left: 20px;
+    }
+    .stages-step-item-five {
+        position: absolute;
+        top: 810px;
+        right: 70px;
+    }
+    .stages-step {
+        position: relative;
+        align-self: stretch;
+    }
+    .stages-step + .stages-step {
+        /* opacity: 0; */
+        visibility: hidden;
+        display: block;
+    } 
+}
+
+@media screen and (min-width: 1440px) {
+    .stages {
+        background-image: url(./img/stages/stages-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 230px 20px;
+        margin-bottom: 168px;
+    }
+    .stages-wrapper h3 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .stages-step-item-first {
+        top: 97px;
+        left: 10px;
+    }
+    .stages-step-item-second {
+        top: 153px;
+        right: 59px;
+    }
+    .stages-step-item-free {
+        top: 445px;
+        right: 8px;
+    }
+    .stages-step-item-four {
+        top: 440px;
+        left: 174px;
+    }
+    .stages-step-item-five {
+        top: 731px;
+        right: 354px;
+    }
+
 }
