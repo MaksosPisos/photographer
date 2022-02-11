@@ -184,6 +184,13 @@ const overlay = document.querySelector('.overlay');
 const modal = document.querySelectorAll('.pricing-card__modal');
 const closeModal = document.querySelectorAll('.pricing-card__modal svg');
 
+const btnSubmModalWindow = document.querySelectorAll('.btn-modalSubmit');
+const inputNumbFoto = document.querySelectorAll('#pricing-card__modal__inputNumber');
+const numberFoto = document.querySelectorAll('.pricing-card__numbFoto');
+const priceFoto = document.querySelectorAll('.pricing-card__PriceFoto');
+
+
+
 btnModalWindow.forEach((item) => {
     item.addEventListener('click', () => {
         let parentBtnModal = item.closest('.pricing-card');
@@ -207,6 +214,56 @@ btnModalWindow.forEach((item) => {
                         overlay.classList.remove('open');
                         body.classList.remove('open');
                     })
+                    document.body.addEventListener('keyup', function (e) {
+                        var key = e.keyCode;
+                        if (key == 27) {
+                            overlay.classList.remove('open');
+                            value.classList.remove('open');
+                            body.classList.remove('open');
+                        };
+                    }, false);
+                    inputNumbFoto.forEach((getNumbFoto) => {
+                        let inputParent = getNumbFoto.closest('.pricing-card');
+                        let btnsSubmParent;
+                        btnSubmModalWindow.forEach((btnsSubm) => {
+                            let btnsSubmParent = btnsSubm.closest('.pricing-card')
+                            if (inputParent === btnsSubmParent) {
+                                btnsSubm.addEventListener('click', () => {
+                                    numberFoto.forEach((setNumbFoto) => {
+                                        priceFoto.forEach((setPriceFoto) => {
+                                            let setNumbFotoParent = setNumbFoto.closest('.pricing-card');
+                                            let setPriceFotoParent = setPriceFoto.closest('.pricing-card');
+                                            if (setNumbFotoParent === setPriceFotoParent && setNumbFotoParent === btnsSubmParent) {
+                                                setNumbFoto.textContent = getNumbFoto.value;
+                                                setPriceFoto.textContent = getNumbFoto.value * 250;
+                                                overlay.classList.remove('open');
+                                                value.classList.remove('open');
+                                                body.classList.remove('open');
+                                                priceValue.forEach((priceTotal) => {
+                                                    if (setNumbFotoParent === priceTotal.closest('.pricing-card')){
+                                                        priceTotal.textContent = +priceTotal.textContent + getNumbFoto.value * 250;
+                                                        item.classList.add('active');
+                                                        if (getNumbFoto.value == 0) {
+                                                            item.classList.remove('active');
+                                                        }
+                                                        // НУЖНО ОТНИМАТЬ ЗНАЧЕНИЕ 
+                                                        // НАСТРОИТЬ ЗАЩИТУ ОТ НЕККОРЕКТНОГО ВВОДА
+                                                    }
+                                                })
+                                            }
+
+                                        })
+                                    })
+
+
+                                })
+                            }
+
+
+                        })
+                    })
+
+
                 }
             })
         })

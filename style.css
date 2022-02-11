@@ -1327,7 +1327,8 @@ body.open {
     transition: .3s ease;
 }
 .pricing-card-button-help.active,
-.pricing-card-button-makeup.active {
+.pricing-card-button-makeup.active,
+.btn-pricingMini.active {
     border-color: #E97522;
 }
 /* modal window */
@@ -1411,6 +1412,7 @@ body.open {
     background: #fff;
     min-height: 32px;
     text-indent: 12px;
+    font-family: inherit;
 }
 .pricing-card__modal form input::-webkit-outer-spin-button,
 .pricing-card__modal form input::-webkit-inner-spin-button {
@@ -1422,6 +1424,7 @@ body.open {
 .pricing-card__modal form input:hover,
 .pricing-card__modal form input:focus {
     border-color: #E97522;
+    border: 1px solid;
 }   
 .pricing-card__modal form .btn {
     width: 100%;
@@ -1434,5 +1437,32 @@ body.open {
     font-weight: 600;
     letter-spacing: 3px;
     padding: 12px 0; 
-
+}
+::-webkit-input-placeholder {
+    color:#B1B1B1;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: .4;
+    transition: .3s ease;
+}
+::-moz-placeholder{
+    color:#B1B1B1;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: .4;
+    transition: .3s ease;
+}/* Firefox 19+ */
+:-moz-placeholder{
+    color:#B1B1B1;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: .4;
+    transition: .3s ease;
+}/* Firefox 18- */
+:-ms-input-placeholder{
+    color:#B1B1B1;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: .4;
+    transition: .3s ease;
 }

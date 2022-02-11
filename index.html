@@ -565,7 +565,7 @@
                     Стоимость фотосесии
                 </h3>
                 <div class="pricing-card-wrapper">
-                    <div class="pricing-card pricing-card-mini">
+                    <div class="pricing-card pricing-card-mini" id="pricing-card-mini_link">
                         <div class="pricing-card__about">
                             <h6>
                                 MINI
@@ -612,7 +612,7 @@
                                     Визажист <br> + 2000 ₽
                                 </button>
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — 1 шт. / 250 ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -627,12 +627,12 @@
                                         Количество
                                     </h6>
                                     <form action="">
-                                        <input type="number" name="" min='1' maxlength="100"
+                                        <input type="number" name="" min='0' max="100" required
                                             id="pricing-card__modal__inputNumber"
                                             placeholder="Введите количество фото для ретуши">
-                                        <button class="btn main-btn" type="submit">
+                                        <a href="#pricing-card-mini_link" class="btn main-btn btn-modalSubmit">
                                             Сохранить
-                                        </button>
+                                        </a>
                                     </form>
 
                                 </div>
@@ -643,7 +643,7 @@
                             выбрать локацию
                         </a>
                     </div>
-                    <div class="pricing-card pricing-card-standart">
+                    <div class="pricing-card pricing-card-standart" id="pricing-card-standart_link">
                         <div class="pricing-card__about">
                             <h6>
                                 STANDART
@@ -691,7 +691,7 @@
                                     Визажист <br> + 2000 ₽
                                 </button>
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — 1 шт. / 250 ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -706,12 +706,12 @@
                                         Количество
                                     </h6>
                                     <form action="">
-                                        <input type="number" name="" min='1' maxlength="100"
+                                        <input type="number" name="" min='1' maxlength="100" required
                                             id="pricing-card__modal__inputNumber"
                                             placeholder="Введите количество фото для ретуши">
-                                        <button class="btn main-btn" type="submit">
+                                        <a class="btn main-btn btn-modalSubmit" href="#pricing-card-standart_link">
                                             Сохранить
-                                        </button>
+                                        </a>
                                     </form>
 
                                 </div>
@@ -721,7 +721,7 @@
                             выбрать локацию
                         </a>
                     </div>
-                    <div class="pricing-card pricing-card-maxi">
+                    <div class="pricing-card pricing-card-maxi" id="pricing-card-maxi_link">
                         <div class="pricing-card__about">
                             <h6>
                                 MAXI
@@ -765,7 +765,7 @@
                             </h6>
                             <div class="pricing-card__extraService-item">
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — 1 шт. / 250 ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -779,13 +779,13 @@
                                     <h6>
                                         Количество
                                     </h6>
-                                    <form action="">
-                                        <input type="number" name="" min='1' maxlength="100"
+                                    <form>
+                                        <input type="number" name="" min='1' maxlength="100" required
                                             id="pricing-card__modal__inputNumber"
                                             placeholder="Введите количество фото для ретуши">
-                                            <button class="btn main-btn" type="menu">
+                                            <a class="btn main-btn btn-modalSubmit" href="#pricing-card-maxi_link">
                                                 Сохранить
-                                            </button>
+                                            </a>
                                     </form>
 
                                 </div>
