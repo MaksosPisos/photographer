@@ -1163,11 +1163,17 @@ body.open {
     }
     .about-wrapper p,
     .aboutNew-wrapper p {
-        line-height: 28px;
+        line-height: 26px;
     }
     .aboyt-collapsible,
     .aboutNew-collapsible {
-        padding-top: 2px;
+        padding-top: 0px;
+    }
+    .about-wrapper p {
+        max-height: 260px;
+    }
+    .aboutNew-text {
+        max-height: 286px !important;
     }
 }
 
@@ -1196,3 +1202,237 @@ body.open {
 
 /* pricing */
 
+.pricing {
+    padding-bottom: 60px;
+}
+.pricing-wrapper h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: var(--text-color-1);
+    padding-bottom: 40px;
+}
+.pricing-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    padding: 0 1rem;
+}
+.pricing-card {
+    border-radius: 16px;
+    background-color: #F2F4F4;
+    padding: 45px 35px;
+    background-image: url(./img/pricing/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: 245px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 350px;
+}
+.pricing-card__about {
+    padding-bottom: 8px;
+}
+.pricing-card__about h6 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text-color-2);
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+.pricing-card__value {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+    color: var(--text-color-1);
+    display: inline;
+    
+}
+.pricing-card__valueRub {
+    display: inline;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: var(--text-color-1);
+}
+.pricing-card__numberLocations {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #838383;
+}
+.pricing-card__components {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.pricing-card__componentsItem {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color-1);
+}
+.pricing-card__extraService {
+    display: flex;
+    flex-direction: column;
+}
+.pricing-card__extraService h6 {
+    align-self: center;
+    padding-bottom: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color-1);
+}
+.pricing-card__extraService-item .btn{
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px;
+    color: var(--text-color-1);
+    padding: 6px 0;
+}
+.pricing-card__extraService-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+.btn-pricingMini {
+    grid-column: 1 / 3;
+}
+
+.pricing-card-maxi .btn-pricingMaxi {
+    grid-column: 1 / 3;
+}
+.pricing-card-maxi {
+    background-color: #F5D9C6;
+}
+.pricing-card-standart {
+    background-color: var(--bg-color-2);
+}
+.pricing-card-button-help {
+    transition: .3s ease;
+}
+.pricing-card-button-help.active,
+.pricing-card-button-makeup.active {
+    border-color: #E97522;
+}
+/* modal window */
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    transition: .3s ease;
+}
+.pricing-card__modal {
+    opacity: 0;
+    visibility: hidden;
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 338px;
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    /*  Побочные стили   */
+    padding: 40px 25px;
+    border-radius: 7px;
+    background-color: #fff;
+    transition: 0.3s all;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.overlay.open,
+.pricing-card__modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+.pricing-card__modal svg{
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+}
+.pricing-card__modal svg path {
+    transition: .3s ease;
+}
+.pricing-card__modal svg:hover path{
+    stroke: #E97522;
+}
+.pricing-card__modal h3 {
+    color: var(--text-color-2);
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.pricing-card__modal h6 {
+    align-self: flex-start;
+    padding-bottom: 6px;
+    font-size: 14px;
+    line-height: 12px;
+    color: #121621;
+    opacity: .4;
+}
+.pricing-card__modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+.pricing-card__modal form input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #DDDEE4;
+    background: #fff;
+    min-height: 32px;
+    text-indent: 12px;
+}
+.pricing-card__modal form input::-webkit-outer-spin-button,
+.pricing-card__modal form input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.pricing-card__modal form input:active,
+.pricing-card__modal form input:hover,
+.pricing-card__modal form input:focus {
+    border-color: #E97522;
+}   
+.pricing-card__modal form .btn {
+    width: 100%;
+    background: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);
+    border-radius: 6px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding: 12px 0; 
+
+}
