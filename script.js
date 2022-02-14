@@ -178,7 +178,7 @@ btnMakeup.forEach((item) => {
         }
     })
 })
-
+// modal
 const btnModalWindow = document.querySelectorAll('.btn-pricingMini');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelectorAll('.pricing-card__modal');
@@ -188,8 +188,6 @@ const btnSubmModalWindow = document.querySelectorAll('.btn-modalSubmit');
 const inputNumbFoto = document.querySelectorAll('#pricing-card__modal__inputNumber');
 const numberFoto = document.querySelectorAll('.pricing-card__numbFoto');
 const priceFoto = document.querySelectorAll('.pricing-card__PriceFoto');
-
-
 
 btnModalWindow.forEach((item) => {
     item.addEventListener('click', () => {
@@ -241,14 +239,26 @@ btnModalWindow.forEach((item) => {
                                                 body.classList.remove('open');
                                                 priceValue.forEach((priceTotal) => {
                                                     if (setNumbFotoParent === priceTotal.closest('.pricing-card')){
-                                                        priceTotal.textContent = +priceTotal.textContent + getNumbFoto.value * 250;
                                                         item.classList.add('active');
-                                                        if (getNumbFoto.value == 0) {
+                                                        if (getNumbFoto.value <= 0) {
+                                                            setNumbFoto.textContent = '0';
+                                                            setPriceFoto.textContent = '0';
                                                             item.classList.remove('active');
                                                         }
+                                                    }
+                                                        // let defaultPrice = +priceTotal.textContent;
+  
+                                                        // let delta = +setPriceFoto.textContent;
+                                                        // priceTotal.textContent = +priceTotal.textContent + delta;
+                                                        // item.classList.add('active');
+                                                        // if (getNumbFoto.value == 0) {
+                                                        //     priceTotal.textContent = +priceTotal.textContent - delta;
+                                                        //     console.log(priceTotal.textContent)
+                                                        //     item.classList.remove('active');
+                                                        // }
                                                         // НУЖНО ОТНИМАТЬ ЗНАЧЕНИЕ 
                                                         // НАСТРОИТЬ ЗАЩИТУ ОТ НЕККОРЕКТНОГО ВВОДА
-                                                    }
+                                                    // }
                                                 })
                                             }
 
@@ -269,3 +279,78 @@ btnModalWindow.forEach((item) => {
         })
     })
 })
+
+const btnModalMain = document.querySelector('.btnModalMain');
+const modalMain = document.querySelector('.main-modalWindow');
+const closeModalMain = document.querySelector('.main-modalWindow svg');
+
+btnModalMain.addEventListener('click', () => {
+    overlay.classList.add('open');
+    modalMain.classList.add('open');
+    body.classList.add('open');
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        modalMain.classList.remove('open');
+        body.classList.remove('open');
+        modalSubMain.classList.remove('open')
+    })
+    closeModalMain.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        modalMain.classList.remove('open');
+        body.classList.remove('open');
+    })
+    document.body.addEventListener('keyup', function (e) {
+        let key = e.keyCode;
+        if (key === 27) {
+            overlay.classList.remove('open');
+            modalMain.classList.remove('open');
+            body.classList.remove('open');
+        };
+    }, false);
+})
+const btnSubmModalMain = document.querySelector('.btnSubmModalMain');
+const modalSubMain = document.querySelector('.main-modalWindowGratitude');
+const closeModalSubMain = document.querySelector('.main-modalWindowGratitude svg');
+const inputModalMain = document.querySelectorAll('.main-modalWindow form input');
+
+btnSubmModalMain.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalMain.classList.remove('open');
+    modalSubMain.classList.add('open');
+    closeModalSubMain.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        modalSubMain.classList.remove('open');
+        body.classList.remove('open');
+    })
+    inputModalMain.forEach(item => {
+        if (item.value == ''){
+            // тут проверка на ввод данных
+            console.log('ki')
+        }
+    })
+    
+})
+
+
+// scroll
+
+const linksNav = document.querySelectorAll('.header-menu a');
+const sectionNav = document.querySelectorAll('.section-nav');
+
+window.onscroll = function() {
+
+    for(let i = 0; i < sectionNav.length; i++){
+        let delta = Math.abs(sectionNav[i].offsetTop - window.scrollY);
+        if (delta < window.innerHeight / 2) {
+            if (document.querySelector('.header-menu a.active')){
+                document.querySelector('.header-menu a.active').classList.remove('active');
+            }
+            linksNav[i].classList.add('active');
+            break;
+        }
+
+    }
+}
+
+
+

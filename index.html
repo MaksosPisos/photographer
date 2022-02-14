@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -29,22 +30,22 @@
                     </a>
                 </div>
                 <div class="header-menu">
-                    <a href="#portfolio" class="header-menu_portfolio">
+                    <a href="#portfolio" class="header-menu_portfolio active">
                         Портфолио
+                    </a>
+                    <a href="#aboutFotoStudio" class="header-menu_about">
+                        О фотостудии
                     </a>
                     <a href="#services" class="header-menu_typejob">
                         Виды работ
                     </a>
-                    <a href="#" class="header-menu_about">
-                        О фотостудии
-                    </a>
-                    <a href="#" class="header-menu_feedback">
+                    <a href="#reviews" class="header-menu_feedback">
                         Отзывы
                     </a>
-                    <a href="#" class="header-menu_price">
+                    <a href="#pricingU" class="header-menu_price">
                         Услуги и цены
                     </a>
-                    <a href="#" class="header-menu_contacts">
+                    <a href="#contacts" class="header-menu_contacts">
                         Контакты
                     </a>
                 </div>
@@ -89,13 +90,69 @@
                     точностью заявляем, что нашей фотостудией вы останетесь <br> довольны
                     и еще не раз захотите возвращаться к нам.
                 </p>
-                <a href="./form.html" class="btn main-btn">
+                <button class="btn main-btn btnModalMain">
                     получить консультацию
-                </a>
+                </button>
+                <div class="main-modalWindow">
+                    <div class="main-modalWindow__img">
+
+                    </div>
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L22 22" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" />
+                        <path d="M22 1L1 22" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+
+                    <form>
+                        <h3>
+                            Форма обратной связи
+                        </h3>
+                        <h6>
+                            Имя
+                        </h6>
+                        <input type="text" name="name" id="" placeholder="Введите ваше имя">
+                        <h6>
+                            E-mail
+                        </h6>
+                        <input type="email" name="" id="" placeholder="Введите ваш E-mail">
+                        <h6>
+                            Телефон
+                        </h6>
+                        <input type="tel" name="" id="" placeholder="Введите ваш телефон">
+                        <button class="btn main-btn btnSubmModalMain"> Отправить </button>
+                        <div class="main-modalWindow__consent">
+                            Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с
+                            <span> политикой конфиденциальности </span>
+                        </div>
+                    </form>
+
+
+                </div>
+                <div class="main-modalWindowGratitude">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L22 22" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" />
+                        <path d="M22 1L1 22" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <div class="main-modalWindowGratitude__top">
+
+                    </div>
+                    <div class="main-modalWindowGratitude__top-circle">
+
+                    </div>
+                    <div class="main-modalWindowGratitude__bottom">
+
+                    </div>
+                    <div class="main-modalWindowGratitude__bottom-circle">
+
+                    </div>
+                    <h3>
+                        Благодарим <br> за оставленную заявку!
+                    </h3>
+                    <p>Наши специалисты уже обрабатывают Вашу заявку и свяжутся с Вами  в ближайшее время</p> 
+                </div>
             </div>
         </div>
     </div>
-    <div class="works" id="portfolio">
+    <div class="works section-nav" id="portfolio">
         <div class="works-wrapper">
             <h3>
                 Наши работы
@@ -143,7 +200,7 @@
 
         </div>
     </div>
-    <div class="locations">
+    <div class="locations section-nav" id="aboutFotoStudio">
         <div class="wrapper">
             <div class="locations-wrapper">
                 <h3>Наши локации</h3>
@@ -190,13 +247,13 @@
 
                 </div>
 
-                <a href="#" class="btn main-btn">
+                <button class="btn main-btn">
                     выбрать локацию
-                </a>
+                </button>
             </div>
         </div>
     </div>
-    <div class="photostudio">
+    <!-- <div class="photostudio section-nav"  id="aboutFotoStudio">
         <div class="photostudio-wrapper">
             <h3>
                 Оформление <br> фотостудии
@@ -209,8 +266,8 @@
                 </picture>
             </div>
         </div>
-    </div>
-    <div class="services" id="services">
+    </div> -->
+    <div class="services section-nav" id="services">
         <div class="wrapper">
             <div class="services-wrapper">
                 <h3>
@@ -459,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div class="about">
+    <div class="about section-nav">
         <div class="wrapper">
             <div class="about-wrapper">
                 <h3>
@@ -558,7 +615,7 @@
             </div>
         </div>
     </div>
-    <div class="pricing">
+    <div class="pricing section-nav" id="pricingU">
         <div class="wrapper">
             <div class="pricing-wrapper">
                 <h3>
@@ -612,7 +669,8 @@
                                     Визажист <br> + 2000 ₽
                                 </button>
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт.
+                                    / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -640,7 +698,7 @@
 
                         </div>
                         <a href="#" class="btn main-btn">
-                            выбрать локацию
+                            Забронировать
                         </a>
                     </div>
                     <div class="pricing-card pricing-card-standart" id="pricing-card-standart_link">
@@ -691,7 +749,8 @@
                                     Визажист <br> + 2000 ₽
                                 </button>
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт.
+                                    / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -718,7 +777,7 @@
                             </div>
                         </div>
                         <a href="#" class="btn main-btn">
-                            выбрать локацию
+                            Забронировать
                         </a>
                     </div>
                     <div class="pricing-card pricing-card-maxi" id="pricing-card-maxi_link">
@@ -730,7 +789,7 @@
                                 7500 <span class="pricing-card__valueRub">₽</span>
                             </div>
                             <div class="pricing-card__numberLocations">
-                                / 1 локация
+                                / Максимальное количество локаций
                             </div>
                         </div>
                         <div class="pricing-card__components">
@@ -765,7 +824,8 @@
                             </h6>
                             <div class="pricing-card__extraService-item">
                                 <button class="btn btn-pricingMini">
-                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт. / <span class="pricing-card__PriceFoto">250</span> ₽
+                                    Дополнительная ретушь <br> фото — <span class="pricing-card__numbFoto">1</span> шт.
+                                    / <span class="pricing-card__PriceFoto">250</span> ₽
                                 </button>
                                 <div class="pricing-card__modal">
                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
@@ -783,16 +843,16 @@
                                         <input type="number" name="" min='1' maxlength="100" required
                                             id="pricing-card__modal__inputNumber"
                                             placeholder="Введите количество фото для ретуши">
-                                            <a class="btn main-btn btn-modalSubmit" href="#pricing-card-maxi_link">
-                                                Сохранить
-                                            </a>
+                                        <a class="btn main-btn btn-modalSubmit" href="#pricing-card-maxi_link">
+                                            Сохранить
+                                        </a>
                                     </form>
 
                                 </div>
                             </div>
                         </div>
                         <a href="#" class="btn main-btn">
-                            выбрать локацию
+                            Забронировать
                         </a>
                     </div>
                 </div>
@@ -876,6 +936,56 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="certificate">
+        <div class="wrapper">
+            <div class="certificate-wrapper">
+                <h3>
+                    Подарочный сертификат на фотосессию
+                </h3>
+                <div class="certificate-card">
+                    <div class="certificate-card__title">
+                        <h6>
+                            СЕРТИФИКАТ НА ФОТОСЕССИЮ
+                        </h6>
+                        <h3>
+                            Это подарок, <br> который западает <br> в душу
+                        </h3>
+                        <div class="certificate-card__title-services">
+                            <div class="certificate-card__title-services-item">
+                                <img src="./img/certificate/certificate-ex.svg" alt="Cert">
+                                Креативное оформление
+                            </div>
+                            <div class="certificate-card__title-services-item">
+                                <img src="./img/certificate/certificate-ex.svg" alt="Cert">
+                                Открытый календарь
+                            </div>
+                            <div class="certificate-card__title-services-item">
+                                <img src="./img/certificate/certificate-ex.svg" alt="Cert">
+                                Всё включено
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-card__img">
+                        <div class="certificate-card__img-present">
+
+                        </div>
+                        <h6>
+                            Срок действия сертификата: 2 месяца <br> со дня приобретения.
+                        </h6>
+                        <button class="btn main-btn">
+                            Приобрести
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews section-nav" id="reviews">
+
+    </div>
+    <div class="contacts section-nav" id="contacts">
+
     </div>
 
     <div class="overlay" id="overlay-modal">

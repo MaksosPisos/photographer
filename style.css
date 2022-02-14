@@ -31,6 +31,7 @@ body.open {
     color: #fff;
     cursor: pointer;
     border-radius: 10px;
+    transition: .3s ease;
 }
 .header-btn {
     font-weight: 500;
@@ -66,8 +67,6 @@ body.open {
     line-height: 14px;
     padding: 1rem;
 }
-
-
 /* header */
 .header {
     position: sticky;
@@ -115,16 +114,16 @@ body.open {
     transform: translateX(0);
 }
 .header-menu_contacts {
-    order: 4;
+    order: 5;
 }
 .header-menu_typejob {
-    order: 3;
-}
-.header-menu_feedback {
     order: 2;
 }
+.header-menu_feedback {
+    order: 4;
+}
 .header-menu_price {
-    display: none;
+    order: 3;
 }
 .header-menu a {
     text-decoration: none;
@@ -284,6 +283,9 @@ body.open {
 }
 .main-btn{
     text-decoration: none;
+}
+a .main-btn {
+    transition: .3s ease;
 }
 @media screen and (min-width: 571px) {
     .main-wrapper {
@@ -1239,6 +1241,7 @@ body.open {
 }
 .pricing-card__about {
     padding-bottom: 8px;
+    
 }
 .pricing-card__about h6 {
     font-weight: 600;
@@ -1331,6 +1334,67 @@ body.open {
 .btn-pricingMini.active {
     border-color: #E97522;
 }
+.pricing-card__extraService-item .btn {
+    transition: .3s ease;
+}
+.pricing-card__extraService-item .btn:hover {
+    background: #F7F5F5;
+}
+
+@media screen and (min-width: 1024px) {
+    .pricing {
+        padding-bottom: 100px;
+        background-image: url(./img/pricing/bg-plan.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+    .pricing-wrapper h3 {
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 80px;
+    }
+    .pricing-card-wrapper {
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 34px;
+        justify-content: center;
+    }
+    .pricing-card {
+        width: 400px;
+    }
+    .pricing-card__about h6 {
+        padding-bottom: 1rem;
+    }
+    .pricing-card__componentsItem {
+        font-size: 1rem;
+        line-height: 22px;
+
+    }
+    .pricing-card__extraService h6 {
+        font-size: 1rem;
+        line-height: 22px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .pricing {
+        padding-bottom: 150px;
+        background-image: none;
+    }
+    .pricing-wrapper h3 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        padding-bottom: 100px;
+    }
+    .pricing-card-wrapper {
+        gap: 40px;
+    }
+}
+
+
+
 /* modal window */
 .overlay {
     opacity: 0;
@@ -1341,7 +1405,7 @@ body.open {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 10;
+    z-index: 101;
     transition: .3s ease;
 }
 .pricing-card__modal {
@@ -1355,7 +1419,7 @@ body.open {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 102;
     /*  Побочные стили   */
     padding: 40px 25px;
     border-radius: 7px;
@@ -1465,4 +1529,435 @@ body.open {
     line-height: 12px;
     opacity: .4;
     transition: .3s ease;
+}
+
+/* .btn-modalSubmit {
+    pointer-events: none;
+} */
+
+/* scroll active */
+
+.header-menu a.active {
+    color: var(--accent-color);
+}
+
+.pricing-card a.main-btn{
+    text-align: center;
+    transition: .3s ease;
+}
+/* btn hover, transition no work =( */
+.btn.main-btn.btn-modalSubmit {
+    transition: .3 ease !important  ;
+}
+.btn.main-btn.btn-modalSubmit:hover,
+.btn-modalSubmit:active,
+.btn-modalSubmit:focus {
+    background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+} 
+
+
+/* certificate */
+
+
+.certificate {
+    padding-bottom: 60px;
+
+}
+.certificate-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.certificate-wrapper h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 34px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.certificate-card {
+    background: #F9F4EE;
+    border-radius: 25px;
+    margin: 0 1rem;
+    padding: 40px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 343px;
+}
+.certificate-card__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.certificate-card__title h6 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #C8C8C8;
+    padding-bottom: .5rem;
+}
+.certificate-card__title h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 34px;
+    color: var(--text-color-1);
+    padding-bottom: 2rem;
+}
+.certificate-card__title-services {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 8px;
+    row-gap: 1rem;
+}
+.certificate-card__title-services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+}
+.certificate-card__title-services-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color-2);
+}
+
+.certificate-card__img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/certificate/bg-tel.svg);
+    background-repeat: no-repeat;
+    background-position: 30px 30px;
+}
+
+.certificate-card__img-present {
+    width: 267px;
+    height: 267px;
+    background-image: url(./img/certificate/certificate-present.png);
+    background-position: center;
+    background-size: cover;
+}
+.certificate-card__img h6 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-color-1);
+    padding-bottom: 1rem;
+}
+.certificate-card__img button {
+    width: 100%;
+}
+@media screen and (min-width: 1024px) {
+    .certificate {
+        padding-bottom: 100px;
+    }
+    .certificate-wrapper h3 {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 80px;
+    }
+    .certificate-card {
+        background: #F2F4F4;
+        width: 864px;
+        margin: 0;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 20px 0 70px 50px;
+    }
+
+
+    .certificate-card__title {
+        align-items: flex-start;
+    }
+    .certificate-card__title h6 {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: left;
+    }
+    .certificate-card__title h3 {
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: 1px;
+        padding-bottom: 40px;
+        text-align: left;
+    }
+    .certificate-card__title-services {
+        align-items: flex-start;
+    }
+    .certificate-card__title-services-item {
+        flex-direction: row;
+        column-gap: 1rem;
+        font-size: 16px;
+        line-height: 22px;
+        align-items: center;
+    }
+    .certificate-card__img-present {
+        width: 438px;
+        height: 438px;
+        background-image: url(./img/certificate/certificate-present_plan.png);
+    }
+    .certificate-card__img h6 {
+        font-size: 1rem;
+        line-height: 22px;
+    }
+    .certificate-card__img button {
+        width: 342px;
+    }
+    .certificate-card__img {
+        background-image: url(./img/certificate/bg-plan.svg);
+        background-size: cover;
+        background-position: -1px 200px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .certificate {
+        padding-bottom: 150px;
+    }
+    .certificate-wrapper h3 {
+        font-size: 36px;
+        line-height: 44px;
+        padding-bottom: 60px;
+    }
+    .certificate-card {
+        width: 1240px;
+        padding: 0 86px 38px 120px;
+    }
+    .certificate-card__title h3 {
+        font-size: 3rem;
+        line-height: 68px;
+        padding-bottom: 52px;
+    }
+    .certificate-card__img-present {
+        width: 493px;
+        height: 493px;
+        background-image: url(./img/certificate/certificate-present.png);
+    }
+    .certificate-card__img {
+        background-image: url(./img/certificate/bg.svg);
+        background-repeat: no-repeat;
+        background-position: 0 100px;
+    }
+
+}
+/* main modal */
+/* modal window */
+
+.main-modalWindow {
+    opacity: 0;
+    visibility: hidden;
+    /*  Установаем ширину окна  */
+    width: 100%;
+    max-width: 338px;
+    /*  Центрируем и задаем z-index */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+    /*  Побочные стили   */
+    padding: 18px 1rem 2rem;
+    border-radius: 7px;
+    background-color: #fff;
+    transition: 0.3s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 6px 10px rgba(105, 117, 135, 0.2);
+}
+.main-modalWindowGratitude {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 338px;
+    height: 338px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+    background-color: #fff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 6px 10px rgba(105, 117, 135, 0.2);
+    padding: 0 20px;
+    overflow: hidden;
+}
+.main-modalWindowGratitude__top {
+    width: 264px;
+    height: 264px;
+    position: absolute;
+    background: url(./img/main/bg-top-right_tel.png);
+    background-repeat: no-repeat;
+    top: 0;
+    left: 170px;
+}
+.main-modalWindowGratitude__top-circle {
+    width: 106px;
+    height: 106px;
+    background: url(./img/main/bg-top-right-circle_tel.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 82px;
+    left: 300px;
+    mix-blend-mode: multiply;
+}
+.main-modalWindowGratitude__bottom {
+    width: 264px;
+    height: 264px;
+    position: absolute;
+    background: url(./img/main/bg-bottom-left_tel.png);
+    background-repeat: no-repeat;
+    top: 72px;
+    left: 0px;
+}
+.main-modalWindowGratitude__bottom-circle {
+    width: 106px;
+    height: 106px;
+    background: url(./img/main/bg-bottom-left-circle_tel.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+    mix-blend-mode: multiply;
+    
+}
+.main-modalWindow.open,
+.main-modalWindowGratitude.open {
+    opacity: 1;
+    visibility: visible;
+}
+.main-modalWindowGratitude svg{
+    z-index: 1;
+}
+.main-modalWindowGratitude h3 {
+    z-index: 1;
+}
+.main-modalWindow svg,
+.main-modalWindowGratitude svg{
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+.main-modalWindow svg path,
+.main-modalWindowGratitude svg path{
+    transition: .3s ease;
+}
+.main-modalWindow svg:hover path,
+.main-modalWindowGratitude svg:hover path{
+    stroke: #E97522;
+}
+.main-modalWindow h3,
+.main-modalWindowGratitude h3 {
+    color: var(--text-color-2);
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.main-modalWindowGratitude p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #121621;
+    opacity: 0.4;
+}
+.main-modalWindow h6 {
+    align-self: flex-start;
+    padding-bottom: 6px;
+    font-size: 14px;
+    line-height: 12px;
+    color: #121621;
+    opacity: .4;
+}
+.main-modalWindow__img {
+    width: 121px;
+    height: 110px;
+    background-image: url(./img/main/main_modalWindow_tel.png);
+}
+.main-modalWindow form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.main-modalWindow form input {
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid #DDDEE4;
+    background: #fff;
+    min-height: 32px;
+    text-indent: 12px;
+    font-family: inherit;
+}
+.main-modalWindow form h6 {
+    padding-top: 10px;
+}
+
+.main-modalWindow button{
+    margin: 10px 0 1rem;
+}
+.main-modalWindow .main-modalWindow__consent {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #585858;
+}
+.main-modalWindow .main-modalWindow__consent span {
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+.main-modalWindow .btnSubmModalMain {
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+@media screen and (min-width: 1024px) {
+    .main-modalWindow {
+        flex-direction: row;
+        max-width:  840px;
+        height: 508px;
+        align-items: center;
+    }
+    .main-modalWindow__img {
+        width: 362px;
+        height: 331px;
+        background-image: url(./img/main/main_modalWindow_plan.png);
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .main-modalWindow .btnSubmModalMain {
+        width: 374px;
+        padding: 14px 0;
+    }
+    .main-modalWindow form input {
+        width: 374px;
+        padding: 14px 0;
+    }
+    .main-modalWindow form h3 {
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 2rem;
+        text-align: left;
+    }
+    .main-modalWindowGratitude {
+        max-width: 622px;
+        height: 331px;
+    }
+    .main-modalWindowGratitude__top {
+        top: 0;
+        left: 481px;
+    }
+    .main-modalWindowGratitude__top-circle {
+        top: 82px;
+        left: 581px;
+    }
 }
