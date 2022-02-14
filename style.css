@@ -1961,3 +1961,126 @@ a .main-btn {
         left: 581px;
     }
 }
+
+
+
+/* footer */
+
+.footer {
+    background: #F2F4F4;
+    padding: 60px 1rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 52px;
+}
+.footer-nav-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 52px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.footer-wrapper a {
+    text-decoration: none;
+}
+.footer-nav a {
+    color: var(--text-color-2);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    transition: .3s ease;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--accent-color);
+    
+}  
+.footer-nav a:active {
+    font-size: 14px;
+    color: var(--accent-color);
+}
+.footer-line {
+    background-color: #B1B1B1;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+.footer-contacts h6 {
+    color: var(--text-color-1);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+}
+.footer-contacts-img {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.footer-contacts-img a svg path{
+    transition: .3s ease;
+}
+.footer-contacts-img a:hover svg path,
+.footer-contacts-img a:focus svg path,
+.footer-contacts-img a:active svg path{
+    fill: #E97522;
+}
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding: 4rem 0 54px;
+    }
+    .footer-nav {
+        flex-direction: row;
+        align-self: stretch;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 0;
+    }
+    .footer-nav-link {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+        row-gap: 1rem;
+        column-gap: 80px;
+
+    }
+    .footer-logo {
+        width: 212px;
+        height: 55px;
+
+    }
+    .footer-line {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .footer-contacts {
+        flex-direction: row;
+        column-gap: 2rem;
+        
+    }
+    .footer-contacts h6{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .footer-nav-link {
+        display: flex;
+        align-items: center;
+        column-gap: 52px;
+    }
+}
